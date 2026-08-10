@@ -221,9 +221,8 @@
         <div class="cta-box">
             <h3>¿Listo para conocer tus riesgos reales?</h3>
             <p>Agenda una sesión de diagnóstico gratuita o solicita una cotización personalizada.</p>
-            <button type="button" class="btn btn-cta" data-copy="nelsondecanmontilla@gmail.com">Agendar una sesión de diagnóstico gratuita</button>
-            <button type="button" class="btn btn-cta-secundario" data-copy="nelsondecanmontilla@gmail.com">Solicitar cotización personalizada</button>
-            <p class="cta-feedback" id="ctaFeedback" hidden></p>
+            <button type="button" class="btn btn-cta" id="ctaAgendar">Agendar una sesión de diagnóstico gratuita</button>
+            <button type="button" class="btn btn-cta-secundario" id="ctaCotizar">Solicitar cotización personalizada</button>
         </div>
         <div class="contacto-grid">
             <div class="contacto-item">
@@ -252,6 +251,20 @@
     </div>
 </footer>
 
+<!-- Modal de contacto -->
+<div class="modal-overlay" id="modalContacto" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <button type="button" class="modal-cerrar" id="modalCerrar" aria-label="Cerrar">&times;</button>
+        <h3 id="modalTitulo">Agendar diagnóstico / Cotización</h3>
+        <p>
+            Para agendar un presupuesto o cotizar cualquier operación de auditoría,
+            por favor comunícate por el correo señalado. Te responderemos por ese medio.
+        </p>
+        <p class="modal-email" id="modalEmail">nelsondecanmontilla@gmail.com</p>
+        <button type="button" class="btn btn-primario" id="modalCopiar">Copiar correo</button>
+    </div>
+</div>
+
 <script>
     (function () {
         var toggle = document.getElementById('infraToggle');
@@ -267,19 +280,48 @@
             });
         }
 
-        var botonesCopia = document.querySelectorAll('[data-copy]');
-        var feedback = document.getElementById('ctaFeedback');
-        botonesCopia.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                var email = btn.getAttribute('data-copy');
-                navigator.clipboard.writeText(email).then(function () {
-                    if (feedback) {
-                        feedback.textContent = 'Correo copiado: ' + email + ' — pégalo en tu cliente de correo';
-                        feedback.hidden = false;
-                    }
+        var modal = document.getElementById('modalContacto');
+        var modalEmail = document.getElementById('modalEmail');
+        var modalCopiar = document.getElementById('modalCopiar');
+
+        function abrirModal() {
+            if (!modal) return;
+            modal.hidden = false;
+            document.body.style.overflow = 'hidden';
+            if (modalCopiar) modalCopiar.textContent = 'Copiar correo';
+        }
+
+        function cerrarModal() {
+            if (!modal) return;
+            modal.hidden = true;
+            document.body.style.overflow = '';
+        }
+
+        var btnAgendar = document.getElementById('ctaAgendar');
+        var btnCotizar = document.getElementById('ctaCotizar');
+        if (btnAgendar) btnAgendar.addEventListener('click', abrirModal);
+        if (btnCotizar) btnCotizar.addEventListener('click', abrirModal);
+
+        var btnCerrar = document.getElementById('modalCerrar');
+        if (btnCerrar) btnCerrar.addEventListener('click', cerrarModal);
+
+        if (modal) {
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) cerrarModal();
+            });
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal && !modal.hidden) cerrarModal();
+        });
+
+        if (modalCopiar) {
+            modalCopiar.addEventListener('click', function () {
+                navigator.clipboard.writeText(modalEmail.textContent).then(function () {
+                    modalCopiar.textContent = '¡Copiado!';
                 });
             });
-        });
+        }
     })();
 </script>
 
