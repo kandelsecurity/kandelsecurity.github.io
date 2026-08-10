@@ -332,11 +332,58 @@ section {
   margin: 0 auto;
 }
 
+.infra-resumen {
+  font-size: 16px;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 22px auto;
+  opacity: 0.9;
+}
+
+.infra-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.btn-infra-toggle {
+  display: block;
+  margin: 0 auto;
+  padding: 13px 24px;
+  background: var(--azul);
+  color: var(--blanco);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-infra-toggle:hover {
+  background: var(--azul-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.infra-detalles {
+  margin-top: 26px;
+}
+
+.infra-subtitulo {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
 .infra-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .infra-item {
@@ -373,6 +420,48 @@ section {
 }
 
 /* ---------- Contacto ---------- */
+
+.cta-box {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 40px 30px;
+  margin-bottom: 34px;
+}
+
+.cta-box h3 {
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.cta-box p {
+  margin-bottom: 26px;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.btn-cta {
+  background: #FFD700;
+  color: var(--purpura-oscuro);
+  font-size: 16px;
+  padding: 15px 38px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cta:hover {
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4);
+}
+
+.btn-cta-secundario {
+  background: transparent;
+  color: var(--blanco);
+  border: 2px solid var(--blanco);
+  font-size: 15px;
+  margin-left: 12px;
+}
 
 .contacto-grid {
   display: grid;
@@ -425,4 +514,6 @@ footer .sep {
   .hero h1 { font-size: 34px; letter-spacing: 4px; }
   .hero-logo { width: 160px; }
   .section-title { font-size: 24px; }
+  .btn-cta-secundario { margin-left: 0; margin-top: 12px; }
+  .cta-box { padding: 30px 20px; }
 }

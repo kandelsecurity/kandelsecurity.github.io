@@ -160,29 +160,41 @@
 <!-- Infraestructura -->
 <section id="infraestructura">
     <div class="container">
-        <h2 class="section-title">Infraestructura</h2>
+        <h2 class="section-title">Nuestra Suite Tecnológica de Vanguardia</h2>
         <div class="infra-card">
-            <p><strong>Laboratorios de campo y herramientas de KANDEL:</strong></p>
-            <div class="infra-grid">
-                <div class="infra-item"><strong>USB Kali Linux</strong><br>Red Team (Capa 2/4)</div>
-                <div class="infra-item"><strong>USB BookwormPup64</strong><br>Forense RAM en frío</div>
-                <div class="infra-item"><strong>Moto G22 + Termux</strong><br>Nmap LAN y servicio HTTP</div>
-                <div class="infra-item"><strong>Mullvad Browser</strong><br>OSINT anónimo</div>
-                <div class="infra-item"><strong>Evidencias</strong><br>Capturas reactivas (maim v5.7.4)</div>
-                <div class="infra-item"><strong>Grabación forense</strong><br>FFmpeg (h264/mkv)</div>
+            <p class="infra-resumen">
+                Laboratorios de campo, red de IA experta en seguridad y herramientas de clase
+                empresarial: cada fase de la auditoría se ejecuta con precisión y evidencia verificable.
+            </p>
+            <div class="infra-highlights">
+                <div class="infra-item"><strong>Laboratorios de campo</strong><br>Auditorías in situ con equipos dedicados</div>
+                <div class="infra-item"><strong>IA experta en seguridad</strong><br>Red de 6 modelos especializados: ofensivo, defensivo, forense y análisis de evidencias</div>
+                <div class="infra-item"><strong>Evidencia verificable</strong><br>Capturas, grabación forense y reportes ejecutivos PDF en menos de 24 h</div>
             </div>
-        </div>
-        <div class="infra-card" style="margin-top:18px;">
-            <p><strong>Plataforma de procesamiento y defensa:</strong></p>
-            <div class="infra-grid">
-                <div class="infra-item"><strong>IA local (Ollama) — Red de expertos</strong><br>mythos-sec (Ofensivo) · gemma4-SecOps (Defensivo) · qwen_uncensored (Forense) · qwen2.5-coder (Automatización) · granite3.2-vision (Evidencias) · qwen_custom (Asistente)</div>
-                <div class="infra-item"><strong>IA en la nube</strong><br>Groq Cloud · Google AI Studio (Gemini)</div>
-                <div class="infra-item"><strong>Análisis de red</strong><br>Nmap 7.94 · Wireshark 4.2.2 · Scapy · Tcpdump · EvilLimiter</div>
-                <div class="infra-item"><strong>Auditoría inalámbrica</strong><br>aircrack-ng · airmon-ng · airodump-ng</div>
-                <div class="infra-item"><strong>Monitoreo de red</strong><br>Arpwatch (syslog) · ARP fija (nud permanent)</div>
-                <div class="infra-item"><strong>Hardening perimetral</strong><br>UFW + bloqueo global IPv6</div>
-                <div class="infra-item"><strong>Generación de informes</strong><br>Plantilla KANDEL Premium (Pandoc/WeasyPrint)</div>
-                <div class="infra-item"><strong>Desarrollo</strong><br>Python 3.12 · Node.js 22 · Git</div>
+            <button class="btn-infra-toggle" id="infraToggle" aria-expanded="false">
+                Ver detalles técnicos de nuestra infraestructura
+            </button>
+            <div class="infra-detalles" id="infraDetalles" hidden>
+                <p class="infra-subtitulo"><strong>Laboratorios de campo y herramientas de KANDEL:</strong></p>
+                <div class="infra-grid">
+                    <div class="infra-item"><strong>USB Kali Linux</strong><br>Red Team (Capa 2/4)</div>
+                    <div class="infra-item"><strong>USB BookwormPup64</strong><br>Forense RAM en frío</div>
+                    <div class="infra-item"><strong>Moto G22 + Termux</strong><br>Nmap LAN y servicio HTTP</div>
+                    <div class="infra-item"><strong>Mullvad Browser</strong><br>OSINT anónimo</div>
+                    <div class="infra-item"><strong>Evidencias</strong><br>Capturas reactivas (maim v5.7.4)</div>
+                    <div class="infra-item"><strong>Grabación forense</strong><br>FFmpeg (h264/mkv)</div>
+                </div>
+                <p class="infra-subtitulo"><strong>Plataforma de procesamiento y defensa:</strong></p>
+                <div class="infra-grid">
+                    <div class="infra-item"><strong>IA local (Ollama) — Red de expertos</strong><br>mythos-sec (Ofensivo) · gemma4-SecOps (Defensivo) · qwen_uncensored (Forense) · qwen2.5-coder (Automatización) · granite3.2-vision (Evidencias) · qwen_custom (Asistente)</div>
+                    <div class="infra-item"><strong>IA en la nube</strong><br>Groq Cloud · Google AI Studio (Gemini)</div>
+                    <div class="infra-item"><strong>Análisis de red</strong><br>Nmap 7.94 · Wireshark 4.2.2 · Scapy · Tcpdump · EvilLimiter</div>
+                    <div class="infra-item"><strong>Auditoría inalámbrica</strong><br>aircrack-ng · airmon-ng · airodump-ng</div>
+                    <div class="infra-item"><strong>Monitoreo de red</strong><br>Arpwatch (syslog) · ARP fija (nud permanent)</div>
+                    <div class="infra-item"><strong>Hardening perimetral</strong><br>UFW + bloqueo global IPv6</div>
+                    <div class="infra-item"><strong>Generación de informes</strong><br>Plantilla KANDEL Premium (Pandoc/WeasyPrint)</div>
+                    <div class="infra-item"><strong>Desarrollo</strong><br>Python 3.12 · Node.js 22 · Git</div>
+                </div>
             </div>
         </div>
     </div>
@@ -206,6 +218,12 @@
 <section id="contacto">
     <div class="container">
         <h2 class="section-title">Contacto</h2>
+        <div class="cta-box">
+            <h3>¿Listo para conocer tus riesgos reales?</h3>
+            <p>Agenda una sesión de diagnóstico gratuita o solicita una cotización personalizada.</p>
+            <a class="btn btn-cta" href="mailto:nelsondecanmontilla@gmail.com?subject=Agendar%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20gratuita">Agendar una sesión de diagnóstico gratuita</a>
+            <a class="btn btn-cta-secundario" href="mailto:nelsondecanmontilla@gmail.com?subject=Solicitud%20de%20cotizaci%C3%B3n%20personalizada">Solicitar cotización personalizada</a>
+        </div>
         <div class="contacto-grid">
             <div class="contacto-item">
                 <div class="icono">👤</div>
@@ -232,6 +250,23 @@
         KANDEL © 2026 <span class="sep">·</span> Tactical Cyber Security <span class="sep">·</span> CONFIDENCIAL
     </div>
 </footer>
+
+<script>
+    (function () {
+        var toggle = document.getElementById('infraToggle');
+        var detalles = document.getElementById('infraDetalles');
+        if (toggle && detalles) {
+            toggle.addEventListener('click', function () {
+                var visible = !detalles.hidden;
+                detalles.hidden = visible;
+                toggle.textContent = visible
+                    ? 'Ver detalles técnicos de nuestra infraestructura'
+                    : 'Ocultar detalles técnicos';
+                toggle.setAttribute('aria-expanded', !visible);
+            });
+        }
+    })();
+</script>
 
 </body>
 </html>
