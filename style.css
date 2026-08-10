@@ -145,6 +145,11 @@ body {
   font-size: 15px;
   letter-spacing: 0.5px;
   transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  text-align: center;
 }
 
 .btn:hover {
@@ -461,6 +466,13 @@ section {
   border: 2px solid var(--blanco);
   font-size: 15px;
   margin-left: 12px;
+}
+
+.cta-feedback {
+  margin-top: 18px;
+  font-weight: 600;
+  color: #FFD700;
+  font-size: 14px;
 }
 
 .contacto-grid {

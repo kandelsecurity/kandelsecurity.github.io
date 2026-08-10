@@ -221,8 +221,9 @@
         <div class="cta-box">
             <h3>¿Listo para conocer tus riesgos reales?</h3>
             <p>Agenda una sesión de diagnóstico gratuita o solicita una cotización personalizada.</p>
-            <a class="btn btn-cta" href="mailto:nelsondecanmontilla@gmail.com?subject=Agendar%20una%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20gratuita">Agendar una sesión de diagnóstico gratuita</a>
-            <a class="btn btn-cta-secundario" href="mailto:nelsondecanmontilla@gmail.com?subject=Solicitud%20de%20cotizaci%C3%B3n%20personalizada">Solicitar cotización personalizada</a>
+            <button type="button" class="btn btn-cta" data-copy="nelsondecanmontilla@gmail.com">Agendar una sesión de diagnóstico gratuita</button>
+            <button type="button" class="btn btn-cta-secundario" data-copy="nelsondecanmontilla@gmail.com">Solicitar cotización personalizada</button>
+            <p class="cta-feedback" id="ctaFeedback" hidden></p>
         </div>
         <div class="contacto-grid">
             <div class="contacto-item">
@@ -265,6 +266,20 @@
                 toggle.setAttribute('aria-expanded', !visible);
             });
         }
+
+        var botonesCopia = document.querySelectorAll('[data-copy]');
+        var feedback = document.getElementById('ctaFeedback');
+        botonesCopia.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var email = btn.getAttribute('data-copy');
+                navigator.clipboard.writeText(email).then(function () {
+                    if (feedback) {
+                        feedback.textContent = 'Correo copiado: ' + email + ' — pégalo en tu cliente de correo';
+                        feedback.hidden = false;
+                    }
+                });
+            });
+        });
     })();
 </script>
 
