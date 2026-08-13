@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Auditoría y ciberseguridad profesional. Perimetral · Web · Wi-Fi · OSINT · Forense · IA.">
     <meta name="twitter:image" content="https://kandelsecurity.github.io/assets/og_kandel_2026.png">
 
-    <link rel="stylesheet" href="style.css?v=20260812">
+    <link rel="stylesheet" href="style.css?v=20260813">
 </head>
 <body>
 
@@ -39,6 +39,7 @@
             <a href="#planes">Planes</a>
             <a href="#metodologia">Metodología</a>
             <a href="#infraestructura">Infraestructura</a>
+            <a href="#producto">Producto</a>
             <a href="#porque">Por qué KANDEL</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -424,6 +425,50 @@
     </div>
 </section>
 
+<!-- Producto: KANDELlimiter -->
+<section id="producto">
+    <div class="container">
+        <h2 class="section-title">Nuestro Producto: KANDELlimiter</h2>
+        <p class="producto-intro">
+            Herramienta propia de KANDEL para <strong>gestión y auditoría de redes locales</strong>.
+            Interfaz gráfica profesional, instalable por USB y lista para usar en minutos.
+        </p>
+        <div class="producto-grid">
+            <div class="producto-imagen">
+                <img src="assets/kandellimiter_captura.png" alt="Captura de la interfaz de KANDELlimiter">
+                <p class="producto-leyenda">Interfaz KANDELlimiter: escaneo de equipos, control de velocidad y bloqueo selectivo.</p>
+            </div>
+            <div class="producto-info">
+                <div class="producto-features">
+                    <div class="producto-feature">
+                        <div class="producto-icono">📡</div>
+                        <h4>Escaneo de red</h4>
+                        <p>Detecta automáticamente los equipos conectados a la red local y muestra su dirección IP y MAC.</p>
+                    </div>
+                    <div class="producto-feature">
+                        <div class="producto-icono">⚡</div>
+                        <h4>Control de ancho de banda</h4>
+                        <p>Limita la velocidad de cualquier equipo de 64 Kbps a 10 Mbps con un simple deslizador.</p>
+                    </div>
+                    <div class="producto-feature">
+                        <div class="producto-icono">🛡️</div>
+                        <h4>Bloqueo selectivo</h4>
+                        <p>Corta o restaura el acceso a Internet de un equipo en un clic. Incluido en la versión PREMIUM.</p>
+                    </div>
+                </div>
+                <div class="producto-versiones">
+                    <span class="producto-version trial">TRIAL · Gratis</span>
+                    <span class="producto-version premium">PREMIUM · Con licencia</span>
+                </div>
+                <p class="producto-nota">
+                    Uso exclusivo en redes propias o con autorización explícita del propietario.
+                </p>
+                <button type="button" class="btn btn-cta" id="ctaProducto">Solicitar información</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Confidencialidad -->
 <section id="confidencialidad">
     <div class="container">
@@ -523,8 +568,10 @@
 
         var btnAgendar = document.getElementById('ctaAgendar');
         var btnCotizar = document.getElementById('ctaCotizar');
+        var btnProducto = document.getElementById('ctaProducto');
         if (btnAgendar) btnAgendar.addEventListener('click', abrirModal);
         if (btnCotizar) btnCotizar.addEventListener('click', abrirModal);
+        if (btnProducto) btnProducto.addEventListener('click', abrirModal);
 
         var btnCerrar = document.getElementById('modalCerrar');
         if (btnCerrar) btnCerrar.addEventListener('click', cerrarModal);
