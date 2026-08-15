@@ -469,6 +469,49 @@
     </div>
 </section>
 
+<!-- Producto: Kandelker -->
+<section id="kandelker">
+    <div class="container">
+        <h2 class="section-title">Nuestro Producto: Kandelker</h2>
+        <p class="producto-intro">
+            Herramienta propia de KANDEL para <strong>auditorías de geolocalización OSINT y concienciación corporativa</strong>.
+            Interfaz gráfica profesional con enlace público automático y captura de coordenadas en tiempo real.
+        </p>
+        <div class="producto-grid">
+            <div class="producto-imagen">
+                <img src="assets/kandelker_captura.png" alt="Captura de la interfaz de Kandelker">
+                <p class="producto-leyenda">Interfaz Kandelker: URL pública, terminal de monitoreo y botón Ver en Google Maps.</p>
+            </div>
+            <div class="producto-info">
+                <div class="producto-features">
+                    <div class="producto-feature">
+                        <div class="producto-icono">📍</div>
+                        <h4>Geolocalización inmediata</h4>
+                        <p>Captura en tiempo real las coordenadas GPS del objetivo autorizado y activa el botón Ver en Google Maps.</p>
+                    </div>
+                    <div class="producto-feature">
+                        <div class="producto-icono">🔗</div>
+                        <h4>Enlace público automático</h4>
+                        <p>Genera una URL HTTPS pública sin cuenta mediante túnel Pinggy, lista para copiar y enviar.</p>
+                    </div>
+                    <div class="producto-feature">
+                        <div class="producto-icono">🖥️</div>
+                        <h4>Dashboard táctico</h4>
+                        <p>Terminal de monitoreo en vivo, persistencia de resultados en JSON y control total desde la interfaz.</p>
+                    </div>
+                </div>
+                <div class="producto-versiones">
+                    <span class="producto-version premium">CORPORATIVO · Uso autorizado</span>
+                </div>
+                <p class="producto-nota">
+                    Uso exclusivo en campañas autorizadas por el Director (contrato + NDA + palabra clave "ataque autorizado").
+                </p>
+                <button type="button" class="btn btn-cta" id="ctaKandelker">Solicitar información</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Confidencialidad -->
 <section id="confidencialidad">
     <div class="container">
@@ -569,9 +612,11 @@
         var btnAgendar = document.getElementById('ctaAgendar');
         var btnCotizar = document.getElementById('ctaCotizar');
         var btnProducto = document.getElementById('ctaProducto');
+        var btnKandelker = document.getElementById('ctaKandelker');
         if (btnAgendar) btnAgendar.addEventListener('click', abrirModal);
         if (btnCotizar) btnCotizar.addEventListener('click', abrirModal);
         if (btnProducto) btnProducto.addEventListener('click', abrirModal);
+        if (btnKandelker) btnKandelker.addEventListener('click', abrirModal);
 
         var btnCerrar = document.getElementById('modalCerrar');
         if (btnCerrar) btnCerrar.addEventListener('click', cerrarModal);
