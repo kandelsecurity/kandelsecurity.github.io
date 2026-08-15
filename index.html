@@ -40,6 +40,8 @@
             <a href="#metodologia">Metodología</a>
             <a href="#infraestructura">Infraestructura</a>
             <a href="#producto">Producto</a>
+            <a href="#kandelker">Kandelker</a>
+            <a href="#kandelscan">KANDELscan</a>
             <a href="#porque">Por qué KANDEL</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -512,6 +514,49 @@
     </div>
 </section>
 
+<!-- Producto: KANDELscan -->
+<section id="kandelscan">
+    <div class="container">
+        <h2 class="section-title">Nuestro Producto: KANDELscan</h2>
+        <p class="producto-intro">
+            Herramienta propia de KANDEL para <strong>auditoría de dominios y sitios web</strong> con la potencia del motor Nuclei v3.
+            Descubre en minutos qué vulnerabilidades expone tu página antes de que lo haga un atacante real.
+        </p>
+        <div class="producto-grid">
+            <div class="producto-imagen">
+                <img src="assets/kandelscan_captura.png" alt="Captura de la interfaz de KANDELscan en una auditoría real">
+                <p class="producto-leyenda">Auditoría real en vivo: hallazgos de alta severidad y tecnologías detectadas, contados en tiempo real.</p>
+            </div>
+            <div class="producto-info">
+                <div class="producto-features">
+                    <div class="producto-feature">
+                        <div class="producto-icono">🌐</div>
+                        <h4>Escaneo de dominios e IPs</h4>
+                        <p>Analiza tu sitio web contra más de 13.000 firmas de ataques y vulnerabilidades conocidas, actualizadas a diario.</p>
+                    </div>
+                    <div class="producto-feature">
+                        <div class="producto-icono">🔍</div>
+                        <h4>Resultados en lenguaje claro</h4>
+                        <p>Cada hallazgo se clasifica por criticidad (info, baja, media, alta, crítica) y se explica en español para que lo entiendas sin ser experto.</p>
+                    </div>
+                    <div class="producto-feature">
+                        <div class="producto-icono">📊</div>
+                        <h4>Monitoreo en vivo</h4>
+                        <p>Terminal de auditoría en tiempo real con contadores por severidad. Sabes exactamente qué encontró tu página y en qué ruta.</p>
+                    </div>
+                </div>
+                <div class="producto-versiones">
+                    <span class="producto-version premium">CORPORATIVO · Motor Nuclei v3 (MIT)</span>
+                </div>
+                <p class="producto-nota">
+                    Uso exclusivo en dominios propios o con autorización explícita del propietario. Auditorías solo con contrato + NDA + palabra clave "ataque autorizado".
+                </p>
+                <button type="button" class="btn btn-cta" id="ctaKandelscan">Solicitar información</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Confidencialidad -->
 <section id="confidencialidad">
     <div class="container">
@@ -613,10 +658,12 @@
         var btnCotizar = document.getElementById('ctaCotizar');
         var btnProducto = document.getElementById('ctaProducto');
         var btnKandelker = document.getElementById('ctaKandelker');
+        var btnKandelscan = document.getElementById('ctaKandelscan');
         if (btnAgendar) btnAgendar.addEventListener('click', abrirModal);
         if (btnCotizar) btnCotizar.addEventListener('click', abrirModal);
         if (btnProducto) btnProducto.addEventListener('click', abrirModal);
         if (btnKandelker) btnKandelker.addEventListener('click', abrirModal);
+        if (btnKandelscan) btnKandelscan.addEventListener('click', abrirModal);
 
         var btnCerrar = document.getElementById('modalCerrar');
         if (btnCerrar) btnCerrar.addEventListener('click', cerrarModal);
